@@ -1,0 +1,16 @@
+# Ignore dataset
+input_mammograms/
+
+# Ignore outputs
+output_results/
+
+# Ignore model weights
+*.pt
+
+# Python cache
+__pycache__/
+*.pyc
+
+# Environment
+.env
+venv/

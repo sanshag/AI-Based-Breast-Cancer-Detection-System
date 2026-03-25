@@ -1,0 +1,27 @@
+# Multi-Stage Ensemble Breast Cancer Diagnostic System
+# YOLO11 + DenseNet201 — Core Dependencies
+
+# YOLO11 object detection (ultralytics)
+ultralytics>=8.1.0
+
+# PyTorch & TorchVision (DenseNet201)
+torch>=2.0.0
+torchvision>=0.15.0
+
+# Image processing
+opencv-python>=4.8.0
+Pillow>=10.0.0
+numpy>=1.24.0
+
+# PDF report generation
+reportlab>=4.0.0
+
+# CLI progress display
+tqdm>=4.65.0
+
+# Configuration
+python-dotenv>=1.0.0
+
+# Data science (for metrics & benchmark reports)
+scikit-learn>=1.3.0
+matplotlib>=3.7.0
