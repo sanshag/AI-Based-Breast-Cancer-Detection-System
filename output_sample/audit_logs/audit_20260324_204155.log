@@ -1,0 +1,188 @@
+2026-03-24 20:41:55 | INFO     | ======================================================================
+2026-03-24 20:41:55 | INFO     | MULTI-STAGE ENSEMBLE SESSION STARTED
+2026-03-24 20:41:55 | INFO     |   Input: C:\java\java vs code\mammography\input_mammograms
+2026-03-24 20:41:55 | INFO     |   Output: C:\java\java vs code\mammography\output_results
+2026-03-24 20:41:55 | INFO     |   Images: 10
+2026-03-24 20:41:55 | INFO     |   YOLO Model: yolo11n.pt
+2026-03-24 20:41:55 | INFO     |   DenseNet Model: ImageNet pretrained
+2026-03-24 20:41:55 | INFO     |   TTA: ON
+2026-03-24 20:41:55 | INFO     |   Distill Labels: False
+2026-03-24 20:41:55 | INFO     |   ⓘ GENERAL MODE (no specialist weights found)
+2026-03-24 20:41:55 | INFO     |     Run 'python train_specialist.py --all' to create specialist weights
+2026-03-24 20:41:55 | INFO     | ======================================================================
+2026-03-24 20:41:56 | INFO     | ======================================================================
+2026-03-24 20:41:56 | INFO     | IMAGE: P_00016_LEFT_CC_Original__png.rf.1f9ed64e51fd317a3fdce50bd53f4c66.jpg
+2026-03-24 20:41:56 | INFO     |   Dimensions: 640x640
+2026-03-24 20:41:56 | INFO     |   Processing Time: 0.41s
+2026-03-24 20:41:56 | INFO     |   TTA Enabled: True
+2026-03-24 20:41:56 | INFO     |   Stage 1 (YOLO11) Detections: 0
+2026-03-24 20:41:56 | INFO     |   Ensemble Results: 0
+2026-03-24 20:41:57 | INFO     | ======================================================================
+2026-03-24 20:41:57 | INFO     | IMAGE: P_00016_LEFT_MLO_Original__png.rf.35391884f04957dddd20e91caab9381b.jpg
+2026-03-24 20:41:57 | INFO     |   Dimensions: 640x640
+2026-03-24 20:41:57 | INFO     |   Processing Time: 1.00s
+2026-03-24 20:41:57 | INFO     |   TTA Enabled: True
+2026-03-24 20:41:57 | INFO     |   Stage 1 (YOLO11) Detections: 1
+2026-03-24 20:41:57 | DEBUG    |     YOLO #1: class='cat' conf=0.4568 bbox=(277.7, 317.9, 549.6, 601.5) crop=C:\java\java vs code\mammography\output_results\roi_crops\P_00016_LEFT_MLO_Original__png.rf.35391884f04957dddd20e91caab9381b_crop_1.jpg
+2026-03-24 20:41:57 | INFO     |   Ensemble Results: 1
+2026-03-24 20:41:57 | INFO     |     ENS #1: ensemble=Malignant conf=0.5195 BI-RADS=3 priority=4/10 triage=MODERATE
+2026-03-24 20:41:57 | DEBUG    |       YOLO weighted: 0.2173 | DenseNet weighted: 0.3022
+2026-03-24 20:41:57 | DEBUG    |       DenseNet201: class=Malignant conf=0.5037 P(benign)=0.4963 P(malignant)=0.5037
+2026-03-24 20:41:57 | DEBUG    |       TTA Scores: {
+        "original": 0.5027742385864258,
+        "hflip": 0.5080817937850952,
+        "vflip": 0.5242488384246826,
+        "rot90": 0.509786069393158,
+        "rot180": 0.5021307468414307,
+        "rot270": 0.4749433696269989
+}
+2026-03-24 20:41:57 | DEBUG    |       Features: {"Size_mm": "> 30", "Shape": "Round", "Margin": "Circumscribed", "Density": "Low"}
+2026-03-24 20:41:57 | DEBUG    |       Risk Score: 2.27/10
+2026-03-24 20:41:57 | DEBUG    |       Explainability: The ensemble classified this region as 'Malignant' with 52% combined confidence. YOLO11 detected 'cat' (conf: 46%). DenseNet201 classified as 'Malignant' (Benign: 50%, Malignant: 50%). Models DISAGREE...
+2026-03-24 20:41:57 | INFO     | ======================================================================
+2026-03-24 20:41:57 | INFO     | IMAGE: P_00017_LEFT_CC_Original__png.rf.724906176f2ec1b16c333b87b28ace6e.jpg
+2026-03-24 20:41:57 | INFO     |   Dimensions: 640x640
+2026-03-24 20:41:57 | INFO     |   Processing Time: 0.10s
+2026-03-24 20:41:57 | INFO     |   TTA Enabled: True
+2026-03-24 20:41:57 | INFO     |   Stage 1 (YOLO11) Detections: 0
+2026-03-24 20:41:57 | INFO     |   Ensemble Results: 0
+2026-03-24 20:41:58 | INFO     | ======================================================================
+2026-03-24 20:41:58 | INFO     | IMAGE: P_00017_LEFT_MLO_Original__png.rf.c90c401bd0609229725bb0cc491b57e0.jpg
+2026-03-24 20:41:58 | INFO     |   Dimensions: 640x640
+2026-03-24 20:41:58 | INFO     |   Processing Time: 0.84s
+2026-03-24 20:41:58 | INFO     |   TTA Enabled: True
+2026-03-24 20:41:58 | INFO     |   Stage 1 (YOLO11) Detections: 1
+2026-03-24 20:41:58 | DEBUG    |     YOLO #1: class='cat' conf=0.7716 bbox=(250.3, 260.1, 497.9, 492.2) crop=C:\java\java vs code\mammography\output_results\roi_crops\P_00017_LEFT_MLO_Original__png.rf.c90c401bd0609229725bb0cc491b57e0_crop_1.jpg
+2026-03-24 20:41:58 | INFO     |   Ensemble Results: 1
+2026-03-24 20:41:58 | INFO     |     ENS #1: ensemble=Benign conf=0.6061 BI-RADS=3 priority=5/10 triage=MODERATE
+2026-03-24 20:41:58 | DEBUG    |       YOLO weighted: 0.0914 | DenseNet weighted: 0.3026
+2026-03-24 20:41:58 | DEBUG    |       DenseNet201: class=Malignant conf=0.5043 P(benign)=0.4957 P(malignant)=0.5043
+2026-03-24 20:41:58 | DEBUG    |       TTA Scores: {
+        "original": 0.5038824677467346,
+        "hflip": 0.4974369406700134,
+        "vflip": 0.5251707434654236,
+        "rot90": 0.4748040437698364,
+        "rot180": 0.5229003429412842,
+        "rot270": 0.5014663338661194
+}
+2026-03-24 20:41:58 | DEBUG    |       Features: {"Size_mm": "> 30", "Shape": "Round", "Margin": "Circumscribed", "Density": "Equal"}
+2026-03-24 20:41:58 | DEBUG    |       Risk Score: 2.55/10
+2026-03-24 20:41:58 | DEBUG    |       Explainability: The ensemble classified this region as 'Benign' with 61% combined confidence. YOLO11 detected 'cat' (conf: 77%). DenseNet201 classified as 'Malignant' (Benign: 50%, Malignant: 50%). Models DISAGREE — ...
+2026-03-24 20:41:58 | INFO     | ======================================================================
+2026-03-24 20:41:58 | INFO     | IMAGE: P_00032_RIGHT_CC_Original__png.rf.1e1e561ff5291830899a316811ed1762.jpg
+2026-03-24 20:41:58 | INFO     |   Dimensions: 640x640
+2026-03-24 20:41:58 | INFO     |   Processing Time: 0.10s
+2026-03-24 20:41:58 | INFO     |   TTA Enabled: True
+2026-03-24 20:41:58 | INFO     |   Stage 1 (YOLO11) Detections: 0
+2026-03-24 20:41:58 | INFO     |   Ensemble Results: 0
+2026-03-24 20:41:59 | INFO     | ======================================================================
+2026-03-24 20:41:59 | INFO     | IMAGE: P_00032_RIGHT_MLO_Original__png.rf.984ba9652ac359e08ea5d81d03944125.jpg
+2026-03-24 20:41:59 | INFO     |   Dimensions: 640x640
+2026-03-24 20:41:59 | INFO     |   Processing Time: 0.88s
+2026-03-24 20:41:59 | INFO     |   TTA Enabled: True
+2026-03-24 20:41:59 | INFO     |   Stage 1 (YOLO11) Detections: 1
+2026-03-24 20:41:59 | DEBUG    |     YOLO #1: class='cat' conf=0.4159 bbox=(346.4, 285.8, 583.7, 571.1) crop=C:\java\java vs code\mammography\output_results\roi_crops\P_00032_RIGHT_MLO_Original__png.rf.984ba9652ac359e08ea5d81d03944125_crop_1.jpg
+2026-03-24 20:41:59 | INFO     |   Ensemble Results: 1
+2026-03-24 20:41:59 | INFO     |     ENS #1: ensemble=Malignant conf=0.5228 BI-RADS=4 priority=6/10 triage=MODERATE
+2026-03-24 20:41:59 | DEBUG    |       YOLO weighted: 0.2336 | DenseNet weighted: 0.2892
+2026-03-24 20:41:59 | DEBUG    |       DenseNet201: class=Benign conf=0.5180 P(benign)=0.5180 P(malignant)=0.4820
+2026-03-24 20:41:59 | DEBUG    |       TTA Scores: {
+        "original": 0.4748794734477997,
+        "hflip": 0.46747198700904846,
+        "vflip": 0.492115318775177,
+        "rot90": 0.521057665348053,
+        "rot180": 0.4795578420162201,
+        "rot270": 0.45680660009384155
+}
+2026-03-24 20:41:59 | DEBUG    |       Features: {"Size_mm": "> 30", "Shape": "Round", "Margin": "Circumscribed", "Density": "Low"}
+2026-03-24 20:41:59 | DEBUG    |       Risk Score: 2.27/10
+2026-03-24 20:41:59 | DEBUG    |       Explainability: The ensemble classified this region as 'Malignant' with 52% combined confidence. YOLO11 detected 'cat' (conf: 42%). DenseNet201 classified as 'Benign' (Benign: 52%, Malignant: 48%). Both models AGREE ...
+2026-03-24 20:42:00 | INFO     | ======================================================================
+2026-03-24 20:42:00 | INFO     | IMAGE: P_00037_RIGHT_CC_Original__png.rf.2f61ed86cefbdb1f26baa4cc7d36c809.jpg
+2026-03-24 20:42:00 | INFO     |   Dimensions: 640x640
+2026-03-24 20:42:00 | INFO     |   Processing Time: 0.92s
+2026-03-24 20:42:00 | INFO     |   TTA Enabled: True
+2026-03-24 20:42:00 | INFO     |   Stage 1 (YOLO11) Detections: 1
+2026-03-24 20:42:00 | DEBUG    |     YOLO #1: class='cat' conf=0.7042 bbox=(409.0, 326.6, 449.2, 456.8) crop=C:\java\java vs code\mammography\output_results\roi_crops\P_00037_RIGHT_CC_Original__png.rf.2f61ed86cefbdb1f26baa4cc7d36c809_crop_1.jpg
+2026-03-24 20:42:00 | INFO     |   Ensemble Results: 1
+2026-03-24 20:42:00 | INFO     |     ENS #1: ensemble=Benign conf=0.5876 BI-RADS=3 priority=4/10 triage=MODERATE
+2026-03-24 20:42:00 | DEBUG    |       YOLO weighted: 0.1183 | DenseNet weighted: 0.2941
+2026-03-24 20:42:00 | DEBUG    |       DenseNet201: class=Benign conf=0.5099 P(benign)=0.5099 P(malignant)=0.4901
+2026-03-24 20:42:00 | DEBUG    |       TTA Scores: {
+        "original": 0.49688029289245605,
+        "hflip": 0.49619075655937195,
+        "vflip": 0.4944913685321808,
+        "rot90": 0.5180101990699768,
+        "rot180": 0.4846591651439667,
+        "rot270": 0.4501189589500427
+}
+2026-03-24 20:42:00 | DEBUG    |       Features: {"Size_mm": "> 30", "Shape": "Round", "Margin": "Circumscribed", "Density": "Equal"}
+2026-03-24 20:42:00 | DEBUG    |       Risk Score: 2.55/10
+2026-03-24 20:42:00 | DEBUG    |       Explainability: The ensemble classified this region as 'Benign' with 59% combined confidence. YOLO11 detected 'cat' (conf: 70%). DenseNet201 classified as 'Benign' (Benign: 51%, Malignant: 49%). Both models AGREE on ...
+2026-03-24 20:42:01 | INFO     | ======================================================================
+2026-03-24 20:42:01 | INFO     | IMAGE: P_00037_RIGHT_MLO_Original__png.rf.c28e5deb0cf125ff75db00a1b3f5c2fa.jpg
+2026-03-24 20:42:01 | INFO     |   Dimensions: 640x640
+2026-03-24 20:42:01 | INFO     |   Processing Time: 0.88s
+2026-03-24 20:42:01 | INFO     |   TTA Enabled: True
+2026-03-24 20:42:01 | INFO     |   Stage 1 (YOLO11) Detections: 1
+2026-03-24 20:42:01 | DEBUG    |     YOLO #1: class='cat' conf=0.7672 bbox=(388.1, 293.4, 478.4, 573.0) crop=C:\java\java vs code\mammography\output_results\roi_crops\P_00037_RIGHT_MLO_Original__png.rf.c28e5deb0cf125ff75db00a1b3f5c2fa_crop_1.jpg
+2026-03-24 20:42:01 | INFO     |   Ensemble Results: 1
+2026-03-24 20:42:01 | INFO     |     ENS #1: ensemble=Benign conf=0.6058 BI-RADS=3 priority=5/10 triage=MODERATE
+2026-03-24 20:42:01 | DEBUG    |       YOLO weighted: 0.0931 | DenseNet weighted: 0.3010
+2026-03-24 20:42:01 | DEBUG    |       DenseNet201: class=Malignant conf=0.5017 P(benign)=0.4983 P(malignant)=0.5017
+2026-03-24 20:42:01 | DEBUG    |       TTA Scores: {
+        "original": 0.469233900308609,
+        "hflip": 0.4747087359428406,
+        "vflip": 0.519775390625,
+        "rot90": 0.5331406593322754,
+        "rot180": 0.49272647500038147,
+        "rot270": 0.5205972790718079
+}
+2026-03-24 20:42:01 | DEBUG    |       Features: {"Size_mm": "> 30", "Shape": "Oval", "Margin": "Circumscribed", "Density": "Equal"}
+2026-03-24 20:42:01 | DEBUG    |       Risk Score: 2.68/10
+2026-03-24 20:42:01 | DEBUG    |       Explainability: The ensemble classified this region as 'Benign' with 61% combined confidence. YOLO11 detected 'cat' (conf: 77%). DenseNet201 classified as 'Malignant' (Benign: 50%, Malignant: 50%). Models DISAGREE — ...
+2026-03-24 20:42:02 | INFO     | ======================================================================
+2026-03-24 20:42:02 | INFO     | IMAGE: P_00056_LEFT_MLO_Original__png.rf.df58b5efd2f22b8430b0ac946d2a3278.jpg
+2026-03-24 20:42:02 | INFO     |   Dimensions: 640x640
+2026-03-24 20:42:02 | INFO     |   Processing Time: 0.85s
+2026-03-24 20:42:02 | INFO     |   TTA Enabled: True
+2026-03-24 20:42:02 | INFO     |   Stage 1 (YOLO11) Detections: 1
+2026-03-24 20:42:02 | DEBUG    |     YOLO #1: class='cat' conf=0.2924 bbox=(149.0, 290.1, 295.6, 578.9) crop=C:\java\java vs code\mammography\output_results\roi_crops\P_00056_LEFT_MLO_Original__png.rf.df58b5efd2f22b8430b0ac946d2a3278_crop_1.jpg
+2026-03-24 20:42:02 | INFO     |   Ensemble Results: 1
+2026-03-24 20:42:02 | INFO     |     ENS #1: ensemble=Malignant conf=0.5858 BI-RADS=3 priority=4/10 triage=MODERATE
+2026-03-24 20:42:02 | DEBUG    |       YOLO weighted: 0.2831 | DenseNet weighted: 0.3027
+2026-03-24 20:42:02 | DEBUG    |       DenseNet201: class=Malignant conf=0.5045 P(benign)=0.4955 P(malignant)=0.5045
+2026-03-24 20:42:02 | DEBUG    |       TTA Scores: {
+        "original": 0.5059400796890259,
+        "hflip": 0.4775835871696472,
+        "vflip": 0.4900745153427124,
+        "rot90": 0.5186255574226379,
+        "rot180": 0.5167984366416931,
+        "rot270": 0.5181421637535095
+}
+2026-03-24 20:42:02 | DEBUG    |       Features: {"Size_mm": "> 30", "Shape": "Irregular", "Margin": "Circumscribed", "Density": "Low"}
+2026-03-24 20:42:02 | DEBUG    |       Risk Score: 4.18/10
+2026-03-24 20:42:02 | DEBUG    |       Explainability: The ensemble classified this region as 'Malignant' with 59% combined confidence. YOLO11 detected 'cat' (conf: 29%). DenseNet201 classified as 'Malignant' (Benign: 50%, Malignant: 50%). Models DISAGREE...
+2026-03-24 20:42:02 | INFO     | ======================================================================
+2026-03-24 20:42:02 | INFO     | IMAGE: P_00066_LEFT_CC_Original__png.rf.bcca51d4cc4121a0e5cb5d1506f79d60.jpg
+2026-03-24 20:42:02 | INFO     |   Dimensions: 640x640
+2026-03-24 20:42:02 | INFO     |   Processing Time: 0.90s
+2026-03-24 20:42:02 | INFO     |   TTA Enabled: True
+2026-03-24 20:42:02 | INFO     |   Stage 1 (YOLO11) Detections: 1
+2026-03-24 20:42:02 | DEBUG    |     YOLO #1: class='cat' conf=0.3763 bbox=(404.2, 341.9, 471.4, 508.1) crop=C:\java\java vs code\mammography\output_results\roi_crops\P_00066_LEFT_CC_Original__png.rf.bcca51d4cc4121a0e5cb5d1506f79d60_crop_1.jpg
+2026-03-24 20:42:02 | INFO     |   Ensemble Results: 1
+2026-03-24 20:42:02 | INFO     |     ENS #1: ensemble=Malignant conf=0.5327 BI-RADS=4 priority=6/10 triage=MODERATE
+2026-03-24 20:42:02 | DEBUG    |       YOLO weighted: 0.2495 | DenseNet weighted: 0.2832
+2026-03-24 20:42:02 | DEBUG    |       DenseNet201: class=Benign conf=0.5280 P(benign)=0.5280 P(malignant)=0.4720
+2026-03-24 20:42:02 | DEBUG    |       TTA Scores: {
+        "original": 0.4898751378059387,
+        "hflip": 0.4652066230773926,
+        "vflip": 0.4681512117385864,
+        "rot90": 0.4859420955181122,
+        "rot180": 0.4690435528755188,
+        "rot270": 0.45384037494659424
+}
+2026-03-24 20:42:02 | DEBUG    |       Features: {"Size_mm": "> 30", "Shape": "Round", "Margin": "Circumscribed", "Density": "Low"}
+2026-03-24 20:42:02 | DEBUG    |       Risk Score: 2.27/10
+2026-03-24 20:42:02 | DEBUG    |       Explainability: The ensemble classified this region as 'Malignant' with 53% combined confidence. YOLO11 detected 'cat' (conf: 38%). DenseNet201 classified as 'Benign' (Benign: 53%, Malignant: 47%). Both models AGREE ...
+2026-03-24 20:42:02 | INFO     | SESSION COMPLETE: 10 images in 7.3s
